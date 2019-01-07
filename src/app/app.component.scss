@@ -1,0 +1,82 @@
+@import "../variables";
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+    .search-box { flex: 3 0px; }
+    .title { order: 1; } 
+    .search-box { order: 2; }
+    .profile { order: 3; }
+}
+
+.title {
+
+}
+
+.search-box {
+    width: 100%;
+    input {
+        height: 3em;
+        padding-left: 1em;
+        width: calc(100% - 6.2em);
+        background-color: $color-background;
+        border: none;
+    }
+    button {
+        width: 5em;
+        height: 3em;
+    }
+}
+
+.profile {
+    display: block;
+}
+
+.main-navigation {
+    ul {
+        width: 100%;
+        li {
+            a {               
+                padding-top: 1em;
+                padding-bottom: 1em;
+                color: $color-text;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                &:hover {
+                    color: $color-ing-orange;
+                    background-color: $color-background;
+                }
+            }
+        }
+    }
+}
+
+.second-navigation {
+    ul {
+        li {
+            a {
+                color: $color-text;
+                text-decoration: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 0 4px 8px gainsboro;
+                height: 5em;
+                width: 5em;
+                line-height: 5em;
+                border-radius: 50%;
+                &:hover {
+                    color: $color-ing-orange;
+                    font-weight: bold;
+                    background-color: $color-background;
+                }
+            }
+            .button-text {
+                line-height: 2;
+            }
+        }
+    }
+}

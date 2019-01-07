@@ -1,1 +1,176 @@
-/* You can add global styles to this file, and also import other style files */
+//@import "../node_modules/bootstrap/scss/bootstrap";
+@import "variables.scss";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+  
+  /* HTML5 display-role reset for older browsers */
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+  
+  body {
+    line-height: 1; }
+  
+  ol, ul {
+    list-style: none; }
+  
+  blockquote, q {
+    quotes: none; }
+  
+  blockquote {
+    &:before, &:after {
+      content: '';
+      content: none; } }
+  
+  q {
+    &:before, &:after {
+      content: '';
+      content: none; } }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+h1 {
+    color: $color-heading1;
+    font-size: 2em;
+    &:hover {
+        color: $color-ing-orange-dark;
+    }
+}
+
+h2, h3 {
+    color: $color-heading2;
+    font-size: 1.5em;
+}
+
+body, input[type="text"], button {
+    color: $color-text;
+    font-weight: lighter;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: $color-background;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    background: white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    min-height: 3em;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.main {
+    text-align: left;
+    background: $color-background;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main-left {
+    flex: 4 0px;
+    order: 0;
+    flex: 1 0 0;
+}
+
+.main-right {
+    order: 1;
+    flex: 1 0 0;
+}
+
+.lefthand-menu {
+    background: $color-background-light;
+}
+
+.righthand-menu {
+    background: $color-background-light;
+    justify-content: center;
+}
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+    .main    { flex: 4 0px; }
+    .lefthand-menu { order: 1; } 
+    .main    { order: 2; }
+    .righthand-menu { order: 3; }
+}
+
+.button {
+    a {
+        text-decoration: none;
+        color: $color-text;
+    }
+    border: none;
+    background-color: white;
+    border-bottom: 2px solid white;
+    height: 2em;
+    &:hover {
+        border-bottom: 2px solid $color-text;
+    }
+    font-weight: bold;
+}
+
+.second-navigation {
+    ul {
+        li {
+            a {
+                color: $color-text;
+                text-decoration: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 0 4px 8px gainsboro;
+                height: 5em;
+                width: 5em;
+                line-height: 5em;
+                border-radius: 50%;
+                &:hover {
+                    color: $color-ing-orange;
+                    font-weight: bold;
+                    background-color: $color-background;
+                }
+            }
+            .button-text {
+                line-height: 2;
+            }
+        }
+    }
+}
